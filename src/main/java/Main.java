@@ -18,7 +18,7 @@ public class Main {
 
         for (int i = 0; i < N; i++) {
             // Instantiate first and second actor
-            final ActorRef a = system.actorOf(MyActor.createActor(), "a"+i);
+            final ActorRef a = system.actorOf(Process.createActor(), "a"+i);
             references.add(a);
         }
         
