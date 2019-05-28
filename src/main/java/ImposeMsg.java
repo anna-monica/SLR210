@@ -8,16 +8,13 @@
  *
  * @author anna-monica
  */
-public class GatherMsg {
+public class ImposeMsg {
     int ballot;
-    int imposeballot;
-    int estimate;
+    Integer proposal;
 
-    public GatherMsg(int ballot, int imposeballot, int estimate) {
+    public ImposeMsg(int ballot, Integer proposal) {
         this.ballot = ballot;
-        this.imposeballot = imposeballot;
-        this.estimate = estimate;
+        this.proposal = proposal;
     }
-    
     
 }

@@ -13,15 +13,16 @@ public class Main {
         // Instantiate an actor system
         final ActorSystem system = ActorSystem.create("system");
 
-        int N = 300;
+        int N = 3;
         ArrayList<ActorRef> references = new ArrayList<ActorRef>();
 
         for (int i = 0; i < N; i++) {
             // Instantiate first and second actor
-            final ActorRef a = system.actorOf(Process.createActor(), "a"+i);
+            final ActorRef a = system.actorOf(Process.createActor(i,N), "a"+i);
             references.add(a);
         }
         
+        //give each process a view of all the other processes
         Members m = new Members(references);
         for(ActorRef actor: references){
             actor.tell(m, ActorRef.noSender());
