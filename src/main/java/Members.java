@@ -1,7 +1,9 @@
 
 import akka.actor.ActorRef;
 import java.util.ArrayList;
-
+/**
+ * Class containing the processes' references
+ */
 public class Members {
             public final ArrayList<ActorRef> references;
             public final String data;
